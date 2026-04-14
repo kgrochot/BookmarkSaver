@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookmarkSaver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <h1>BookmarkSaver</h1>
+        <div class="input-container">
+            <input type="text" id="bookmark-name" placeholder="Enter bookmark name">
+            <input type="text" id="bookmark-url" placeholder="Enter bookmark URL">
+            <button id="add-bookmark">Add Bookmark</button>
+        </div>
+
+        <ul id="bookmark-list">
+            <!-- Bookmarks will be listed here -->
+        </ul>
+    </div>
+
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-box">
+            <h2>Edit Bookmark</h2>
+
+            <input id="edit-name" placeholder="Name">
+            <input id="edit-url" placeholder="URL">
+
+            <div class="modal-actions">
+                <button id="cancel-edit">Cancel</button>
+                <button id="save-edit">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

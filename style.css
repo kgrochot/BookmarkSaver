@@ -1,0 +1,223 @@
+:root {
+    --bg: #0f172a;
+    --card: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+
+    --primary: #60a5fa;
+    --danger: #fb7185;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: radial-gradient(circle at top, #1e293b, #0f172a);
+    color: var(--text);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* =========================
+   APP CARD
+   ========================= */
+.app-container {
+    width: min(92%, 520px);
+    padding: 24px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+}
+
+/* =========================
+   TITLE
+   ========================= */
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px 14px;
+    border-radius: 10px;
+
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input::placeholder {
+    color: var(--muted);
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(96,165,250,0.2);
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+
+    background: var(--primary);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+/* =========================
+   LIST
+   ========================= */
+#bookmark-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+
+    transition: 0.15s ease;
+}
+
+#bookmark-list li:hover {
+    background: rgba(255,255,255,0.07);
+    transform: translateY(-1px);
+}
+
+#bookmark-list button {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid rgba(251,113,133,0.4);
+
+    cursor: pointer;
+    transition: 0.15s ease;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bookmark-list button:hover {
+    background: rgba(251,113,133,0.15);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   LINKS
+   ========================= */
+#bookmark-list a {
+    flex: 1;
+    display: block;
+
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+
+    padding: 8px 10px;
+    border-radius: 8px;
+
+    transition: 0.15s ease;
+}
+
+#bookmark-list a:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+#bookmark-list div {
+    display: flex;
+    gap: 6px;
+}
+
+/* =========================
+   MODAL
+   ========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    width: 320px;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    padding: 20px;
+
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
